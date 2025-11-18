@@ -9,7 +9,7 @@ import java.security.Principal;
 @Controller
 public class DashboardController {
 
-    @GetMapping("/home")
+    @GetMapping("/dashboard")
     public String showDashboard(Model model, Principal principal){
         //registry.addViewController("/home").setViewName("dashboard");
         if (principal != null){
