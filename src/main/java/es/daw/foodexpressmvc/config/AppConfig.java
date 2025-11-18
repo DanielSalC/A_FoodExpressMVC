@@ -1,6 +1,5 @@
 package es.daw.foodexpressmvc.config;
 
-import es.daw.foodexpressmvc.dto.RestaurantDTO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,13 +10,15 @@ public class AppConfig {
 
     @Value("${api.base-url}")
     private String apiUrl;
-    @Value("${api.auth-url")
+
+    @Value("${api.auth-url}")
     private String authUrl;
 
     @Bean
-    public WebClient webClient(WebClient.Builder builder){
+    public WebClient webClientAPI(WebClient.Builder builder) {
         return builder
                 .baseUrl(apiUrl)
                 .build();
+
     }
 }

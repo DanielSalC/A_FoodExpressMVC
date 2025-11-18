@@ -1,7 +1,6 @@
 package es.daw.foodexpressmvc.controlador;
 
 import es.daw.foodexpressmvc.dto.RestaurantDTO;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +17,11 @@ public class RestaurantController {
     public String listRestaurants(Model model) {
 
         // pendiente obtener del servicio los restaurantes
+
+
         List<RestaurantDTO> restaurants = new ArrayList<>();
-        model.addAttribute("restaurants", restaurants);
+
+        model.addAttribute("restaurants",restaurants);
         return "restaurants";
     }
 }
